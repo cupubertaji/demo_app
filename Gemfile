@@ -7,14 +7,8 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 
-group :production do
-	gem 'pg'
-	gem 'rails_12factor', '0.0.2'
-end
-
-group :development, :test do
-  gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
-end
+gem 'sqlite3', group: [:development, :test]
+gem 'pg', group: [:production]
 
 # Gems used only for assets and not required
 # in production environments by default.
